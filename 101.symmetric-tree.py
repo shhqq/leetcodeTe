@@ -58,33 +58,42 @@ class Solution:
 # solution 2 
 # 将每层的数据提出来，是不是会好一些
 # 使用try except可以减少代码量
-        if root == None:
-            return True
-        layer = [root]
-        while True:
-            next_layer = []
-            for i in range(len(layer)):
-                next_layer.append(layer[i].left)
-                next_layer.append(layer[i].right)
-            l = len(next_layer)
-            count_None = next_layer.count(None)
-            if count_None == l:
-                return True
-            elif count_None % 2 == 1:
-                return False
-            else:
-                for i in range(l // 2):
-                    if next_layer[i] == None and next_layer[-1 - i] == None:
-                        continue
-                    try:
-                        if next_layer[i].val != next_layer[-1 - i].val:
-                            return False
-                    except AttributeError:
-                        return False
-                layer.clear()
-                for _ in range(count_None):
-                    next_layer.remove(None)
-                layer = next_layer  
+        # if root == None:
+        #     return True
+        # layer = [root]
+        # while True:
+        #     next_layer = []
+        #     for i in range(len(layer)):
+        #         next_layer.append(layer[i].left)
+        #         next_layer.append(layer[i].right)
+        #     l = len(next_layer)
+        #     count_None = next_layer.count(None)
+        #     if count_None == l:
+        #         return True
+        #     elif count_None % 2 == 1:
+        #         return False
+        #     else:
+        #         for i in range(l // 2):
+        #             if next_layer[i] == None and next_layer[-1 - i] == None:
+        #                 continue
+        #             try:
+        #                 if next_layer[i].val != next_layer[-1 - i].val:
+        #                     return False
+        #             except AttributeError:
+        #                 return False
+        #         layer.clear()
+        #         for _ in range(count_None):
+        #             next_layer.remove(None)
+        #         layer = next_layer  
 
+
+        def isSym(L,R):
+            if not L and not R: return True
+            if L and R and L.val == R.val: 
+                return isSym(L.left, R.right) and isSym(L.right, R.left)
+            return False
+        if root is None:
+            return True
+        return isSym(root.left, root.right)
 # @lc code=end
 
