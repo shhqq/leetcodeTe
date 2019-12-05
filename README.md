@@ -38,3 +38,11 @@ Could we use the symmetry of the triangle to save time?
 ### Problem 119 pascal's triangle II
 Record the last element and use it to generate the next one.
 ***
+## 20191205
+### Problem 121 best time to buy and sell stock
+Firstly, use traversal. Although it is usually not the best.
+Secondly, use other ways like dichotomy method.
+Finally, use recursion. Because it needs more memory although it may be easy to complish.
+### Problem 122 best time to buy and sell stock II
+If next value is bigger than the current value, add the difference to the result.
+***
