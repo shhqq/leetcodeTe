@@ -46,3 +46,11 @@ Finally, use recursion. Because it needs more memory although it may be easy to 
 ### Problem 122 best time to buy and sell stock II
 If next value is bigger than the current value, add the difference to the result.
 ***
+##20191207
+### Problem 136 single number
+solution1: 2*sum(set(nums)) - sum(nums)
+solution2: 使用同或，a^b^a = a^a^b = b
+### Problem 141 linked list cycle 
+use hash map
+### Problem 160 intersection of two linked lists
+Let pA and pB point to headA and headB respectively. Then move pA and pB one step backaward. If pA points the tail of A, then let pA point headB. It is the same to pB. If pA is pB, then they are the intersection node. Move at most len(A) + len(B) + 1 times. If there is no intersection node in A and B, return None.
