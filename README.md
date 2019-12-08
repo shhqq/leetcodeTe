@@ -54,3 +54,12 @@ solution2: 使用同或，a^b^a = a^a^b = b
 use hash map
 ### Problem 160 intersection of two linked lists
 Let pA and pB point to headA and headB respectively. Then move pA and pB one step backaward. If pA points the tail of A, then let pA point headB. It is the same to pB. If pA is pB, then they are the intersection node. Move at most len(A) + len(B) + 1 times. If there is no intersection node in A and B, return None.
+***
+## 20191208
+### Problem 167 two sum II
+Running time and memory cost are usually contradictory, but maybe the running time is more important than memory cost.
+### Problem 168 excel sheet column title
+Two new method: *chr()* and *ord()*.
+*chr(int)* returns the ith element of ASCII.
+*ord(char)* returns the index of char in ASCII.
+This is not a difficult but a easy to make a mistake problem.
