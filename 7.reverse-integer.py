@@ -7,6 +7,7 @@
 # @lc code=start
 class Solution:
     def reverse(self, x: int) -> int:
+        # Solution 1: Use string to reverse the integer.
         x_str = str(x)
         length = len(x_str)
         result = ""
@@ -20,6 +21,8 @@ class Solution:
         else:
             return result
         
+        # Solution 2: Divide the integer to every single numbers.
+
         # result = 0
         # temp = abs(x)
         # while True:

@@ -7,6 +7,7 @@
 # @lc code=start
 class Solution:
     def isPalindrome(self, x: int) -> bool:
+        # Solution 1: 
         if x < 0:
             return False
         length = 1
@@ -37,6 +38,7 @@ class Solution:
         #         x = (x % pow(10, length - 1 - i * 2)) // 10
         # return True
 
+        # Solution 2:
         # xlist = []
         # xtemp = x
         # if xtemp<0:

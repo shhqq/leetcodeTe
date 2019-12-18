@@ -6,6 +6,7 @@
 
 -- @lc code=start
 # Write your MySQL query statement below
-select Salary from (select distinct Salary from Employee order by Salary desc) t where rownum = 1;
+select max(Salary) as SecondHighestSalary from Employee where Salary <>
+(select max(Salary) from Employee);
 -- @lc code=end
 

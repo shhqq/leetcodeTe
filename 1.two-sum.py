@@ -7,6 +7,8 @@
 # @lc code=start
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
+        # Solution: Use dictionary or hash table to save the temp values.
+        # Hash table has the time complexity of O(1) in finding member.
         h = {}
         for i, num in enumerate(nums):
             n = target - num
