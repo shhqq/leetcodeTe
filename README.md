@@ -46,7 +46,7 @@ Finally, use recursion. Because it needs more memory although it may be easy to 
 ### Problem 122 best time to buy and sell stock II
 If next value is bigger than the current value, add the difference to the result.
 ***
-##20191207
+## 20191207
 ### Problem 136 single number
 solution1: 2*sum(set(nums)) - sum(nums)
 solution2: 使用同或，a^b^a = a^a^b = b
@@ -63,3 +63,46 @@ Two new method: *chr()* and *ord()*.
 *chr(int)* returns the ith element of ASCII.
 *ord(char)* returns the index of char in ASCII.
 This is not a difficult but a easy to make a mistake problem.
+***
+
+
+```C
+#include <stdio.h>
+
+int main()
+{
+   /* 我的第一个 C 程序 */
+   printf("Hello, World! \n");
+   
+   char *a;
+    a = "absd";
+    printf(a);              // print contents of a, namely "absd"
+    printf("\n");
+    /* don't use %x when printing address.
+    In 32bit system, %x and %p maybe the same.
+    But in 64bit system, %x print 4 bytes while address is 8 bytes. So the result is partial.
+    */
+	printf("addr of a: %p\n", &a);             // print address of a, pointer a.
+    printf("addr of s: %x\n", a);      // print the address of string, namely "absd"
+    printf("addr of s: %p\n", a);      // print the address of string, namely "absd"
+    printf("addr of s: %#p\n", a);     // same as %p, but the result contains "0X" or "0"
+    printf("%d\n", sizeof(int*));
+	
+	printf("===== pointer of int ========\n");
+	int list[3] = {257,3,65538};
+	int *v = list;
+	printf("addr of v:\t %p\n", &v);
+	printf("addr of list:\t %p\n", v);
+	printf("====== 低位存储 =======\n");
+	char *t;
+	t = (char*)v;
+	for (int i = 0; i< 12; i++)
+    {
+        printf("%d\n", *(t + i));
+    }
+		 
+	return 0;
+}
+```
+## 20191218
+from problem 175 switch default language to mysql.
