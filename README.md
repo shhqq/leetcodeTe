@@ -106,3 +106,23 @@ int main()
 ```
 ## 20191218
 from problem 175 switch default language to mysql.
+
+***
+## 20191219
+### Problem 189 rotate array
+solution1, use three reverse operation.
+solution2, use a extra array to store the original array.
+### Problem 190 reverse bits
+Solution 1, transform n to binary list, then reverse the binary list.
+Finally, transform the binary list back to unsigned integer.
+This solution is complex.
+Solution 2, use the bit manipulation.
+Use n&1 to get the last element of binary list of n.
+Use res<<1 to multiply res by 2.
+knowledge point: **bit manipulation**.
+### Problem 191 number of 1 bits -- hamming weight
+**Solution1:** Use the format function.
+Like '{0: 032b}.format()' returns the 32 bits of binary **string** of number.
+The second '0' indicates that the string will be fill in with '0'.
+**Solution2:** Use the bit manipulation.
+n&1 gets the last element of binary list of n.
