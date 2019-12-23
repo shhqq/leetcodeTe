@@ -137,3 +137,19 @@ Floyd Cycle Detection Algorithm.
 It is use in judging whether there is a loop in linked list, 
 recursion method and finite state machine(FSM).  
 It can also be used to find the shortest trip in a map.
+
+
+***
+## 20191223
+### Problem 234 Palindrome linked list
+Reverse the first half or whole list, then compare it with the 
+last half.
+Notice that assigning instance to temp, any change of temp will
+affect the instance. For example:
+```python
+head = ListNode(3)
+t = head
+t.val = 4
+print(head.val)     # value of head will change to 4.
+``` 
+
