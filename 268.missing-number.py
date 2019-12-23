@@ -43,6 +43,8 @@ class Solution:
             else:
                 left = middle
             middle = (left + right) // 2
+        # There are two results:
+        # nums[left] - 1 == target or nums[left] + 1 = target 
         if nums[left] > left:
             return nums[left] - 1
         elif nums[left] == left:
