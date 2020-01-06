@@ -153,3 +153,20 @@ t.val = 4
 print(head.val)     # value of head will change to 4.
 ``` 
 
+***
+## 20200103
+### Problem 392 is subsequence
+Should try other methods to solve the problem.
+Try dynamic programming and binary search.
+
+### Problem 401 binary watch
+New method: bin(n: int)
+
+*bin(n: int)* returns the string of binary representation of the integer.
+For example:
+```python
+print(bin(3))  # '0b11'
+bin(3) + bin(4)  # '0b110b100'
+```
+**Discussion:**
+Maybe it is complex to show all of the sub list of a list. For example, list [2, 3, 4]. It is easy to calculate the amount of sub list using permutation and combination. But it is complex to show them.
