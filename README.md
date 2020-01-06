@@ -151,7 +151,28 @@ head = ListNode(3)
 t = head
 t.val = 4
 print(head.val)     # value of head will change to 4.
-``` 
+```
+
+***
+## 20200106
+### Problem 405 Convert a number to hexadecimal
+Use bit manipulation, '&' and '>>'.
+
+### Problem 409 longest palindrome
+New knowledge: collections
+
+*collections.Counter().values()*
+
+It is similar to *set()*, which gets the single element of string or list .etc.
+```python
+s = 'shghgdshdgg'
+for v in collections.Counter(s).values():
+    print(v)
+```
+
+### Problem 437 Path Sum III
+Use the recursion. The result contains two path: containing the root node and not containing the root node. 
+Maybe it could be solved using dynamic programming.
 
 ***
 ## 20200103
