@@ -8,7 +8,7 @@
 class Solution:
     def findComplement(self, num: int) -> int:
         if num < 0: 
-            return abs(nums) - 1
+            return abs(num) - 1
         else:
             b = bin(num)
             length = len(b)
