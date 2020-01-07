@@ -7,6 +7,9 @@
 # @lc code=start
 class Solution:
     def numberOfBoomerangs(self, points: List[List[int]]) -> int:
+# Solution:
+# Use two layer circulation. Calculate the distance of each point and 
+# the others. So the time complexity is O(n^2).
         count = 0
         for i in range(len(points)):
             distance = {}

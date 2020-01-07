@@ -154,6 +154,24 @@ print(head.val)     # value of head will change to 4.
 ```
 
 ***
+## 20200103
+### Problem 392 is subsequence
+Should try other methods to solve the problem.
+Try dynamic programming and binary search.
+
+### Problem 401 binary watch
+New method: bin(n: int)
+
+*bin(n: int)* returns the string of binary representation of the integer.
+For example:
+```python
+print(bin(3))  # '0b11'
+bin(3) + bin(4)  # '0b110b100'
+```
+**Discussion:**
+Maybe it is complex to show all of the sub list of a list. For example, list [2, 3, 4]. It is easy to calculate the amount of sub list using permutation and combination. But it is complex to show them.
+
+***
 ## 20200106
 ### Problem 405 Convert a number to hexadecimal
 Use bit manipulation, '&' and '>>'.
@@ -174,20 +192,19 @@ for v in collections.Counter(s).values():
 Use the recursion. The result contains two path: containing the root node and not containing the root node. 
 Maybe it could be solved using dynamic programming.
 
+
 ***
-## 20200103
-### Problem 392 is subsequence
-Should try other methods to solve the problem.
-Try dynamic programming and binary search.
+## 20200107
+### Problem 448 find all numbers disappeared in an array
+If there is no requirement of not using extra space, the problem will be easy but meaningless.
 
-### Problem 401 binary watch
-New method: bin(n: int)
+This is an excellent solution:  
+Use two circulation. In the first iterate, mark the elements as negative whose indices appeared in the array (regard the item as index).
+In the second iterate, find the elements which are still positive. The result is made up of their indices.
 
-*bin(n: int)* returns the string of binary representation of the integer.
-For example:
-```python
-print(bin(3))  # '0b11'
-bin(3) + bin(4)  # '0b110b100'
-```
-**Discussion:**
-Maybe it is complex to show all of the sub list of a list. For example, list [2, 3, 4]. It is easy to calculate the amount of sub list using permutation and combination. But it is complex to show them.
+### Problem 455 assign cookies
+Use two pointers to track the children and cookies respectively.
+Is it the Greedy?
+### Problem 461 Hamming distance
+Use bit opeartion '^'.
+'^' returns '1' if the corresponding bit is different, else it returns '0'.
