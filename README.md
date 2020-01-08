@@ -208,3 +208,10 @@ Is it the Greedy?
 ### Problem 461 Hamming distance
 Use bit opeartion '^'.
 '^' returns '1' if the corresponding bit is different, else it returns '0'.
+
+***
+## 20200108
+### Problem 496 next greater element
+Solution 1: you can use the brute force though it may cost a little more time.
+Solution 2: Use a stack( actually a list) and a map to restore the element and its next greater element.
+You can understand it using the example: nums2 = [4,3,2,1,5].
