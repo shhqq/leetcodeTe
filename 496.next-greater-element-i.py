@@ -9,7 +9,7 @@ class Solution:
     def nextGreaterElement(self, nums1: List[int], nums2: List[int]) -> List[int]:
 # Solution 1:
 # brute force. Because the scale of nums1 and nums2 is small(not exceed 1000),
-# so brete force is ok though time complexity is O(n^2).
+# so brute force is ok though time complexity is O(n^2).
         '''
         res = []
         for i in nums1:
