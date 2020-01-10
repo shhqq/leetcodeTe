@@ -53,7 +53,7 @@ solution2: 使用同或，a^b^a = a^a^b = b
 ### Problem 141 linked list cycle 
 use hash map
 ### Problem 160 intersection of two linked lists
-Let pA and pB point to headA and headB respectively. Then move pA and pB one step backaward. If pA points the tail of A, then let pA point headB. It is the same to pB. If pA is pB, then they are the intersection node. Move at most len(A) + len(B) + 1 times. If there is no intersection node in A and B, return None.
+Let pA and pB point to headA and headB, respectively. Then move pA and pB one step backaward. If pA points the tail of A, then let pA point headB. It is the same to pB. If pA is pB, then they are the intersection node. Move at most len(A) + len(B) + 1 times. If there is no intersection node in A and B, return None.
 ***
 ## 20191208
 ### Problem 167 two sum II
@@ -203,7 +203,7 @@ Use two circulation. In the first iterate, mark the elements as negative whose i
 In the second iterate, find the elements which are still positive. The result is made up of their indices.
 
 ### Problem 455 assign cookies
-Use two pointers to track the children and cookies respectively.
+Use two pointers to track the children and cookies, respectively.
 Is it the Greedy?
 ### Problem 461 Hamming distance
 Use bit opeartion '^'.
@@ -221,4 +221,24 @@ You can understand it using the example: nums2 = [4,3,2,1,5].
 ### Problem 501 find mode in binary search tree
 Use a collections.Counter() to establish a map to store value and its occuring times.
 
+***
+## 20200110
+### Problem 543 diameter of binary tree
+You can define a method in a method.
+When you want to use a variable of the external method, you can define the variable as a class variable.
+For example:
+```python
+class Solution(object):
+    def external_method(self) -> None:
+        self.t = 0
 
+        def internal_method() -> None:
+            b = 3
+            self.t = max(self.t, b)
+        
+        internal_method()
+        print(self.t)   # t will be 3.
+
+sln = Solution()
+sln.external_method()
+```
