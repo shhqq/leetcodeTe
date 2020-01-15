@@ -242,3 +242,9 @@ class Solution(object):
 sln = Solution()
 sln.external_method()
 ```
+
+***
+## 20200114
+### Problem 589 N-array tree preorder traversal
+Use a stack to storage the nodes. When popping one node from the tail, append its children to the stack.
+
