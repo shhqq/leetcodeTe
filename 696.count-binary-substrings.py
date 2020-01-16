@@ -7,6 +7,8 @@
 # @lc code=start
 class Solution:
     def countBinarySubstrings(self, s: str) -> int:
+# solution 1:
+# Find all the 
         length = len(s)
         if length == 0:
             return 0
