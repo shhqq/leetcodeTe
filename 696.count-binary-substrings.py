@@ -8,7 +8,9 @@
 class Solution:
     def countBinarySubstrings(self, s: str) -> int:
 # solution 1:
-# Find all the 
+# Find all the contiguous two charactors that are different,
+# and then extend it.
+        '''
         length = len(s)
         if length == 0:
             return 0
@@ -22,5 +24,21 @@ class Solution:
                     else:
                         break
         return ans
+        '''
+
+# Solution 2:
+# group the contiguous identical charactor.
+# Then add the minimum of the contiguous two group length.
+        ans = 0
+        prev = 0
+        cur = 1
+        for i in range(1, len(s)):
+            if s[i] == s[i-1]:
+                cur += 1
+            else:
+                ans += min(prev, cur)
+                prev = cur
+                cur = 1
+        return ans + min(prev, cur)
 # @lc code=end
 
