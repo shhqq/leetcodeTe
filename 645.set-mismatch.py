@@ -7,6 +7,9 @@
 # @lc code=start
 class Solution:
     def findErrorNums(self, nums: List[int]) -> List[int]:
+# Set the number of index occurred in the list to be negative.
+# The number of index repeated twice will be set twice.
+# But the number of index missing will still be positive.
         duplicated = 0
         missed = 0
         for i in nums:
