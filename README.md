@@ -248,3 +248,26 @@ sln.external_method()
 ### Problem 589 N-array tree preorder traversal
 Use a stack to storage the nodes. When popping one node from the tail, append its children to the stack.
 
+*** 
+## 20200117
+### Problem 705 and 706 design hashset and hashmap
+It is interesting to construct the basic data type.
+TODO: Complete a hashset and hashmap without using library methods.
+
+### Problem 728 self dividing number
+
+It is the first time to use for/else loop.
+The for/else loop works like this:
+If the *for* loop ends normally namely it doesn't end by the *break* sentence, then the else sentence will be executed. 
+
+For example
+```python
+ans = []
+for i in range(3, 10):
+    for j in range(2, i):
+        if i % j == 0: 
+            break
+    else:
+        ans.append(i)
+print(ans)
+```
