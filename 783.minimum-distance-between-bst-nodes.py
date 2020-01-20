@@ -14,11 +14,19 @@
 
 class Solution:
     def minDiffInBST(self, root: TreeNode) -> int:
-        # Use inorder traversal and return the greatest
-        # number of node so that it can be calculated with 
-        # the root node.
-        min_diff = 
+        # Use inorder traversal.
+        self.values = []
 
+        def inorder_traversal(root: TreeNode) -> int:
+            if root is None:
+                pass
+            else:
+                inorder_traversal(root.left)
+                self.values.append(root.val)
+                inorder_traversal(root.right)
+
+        inorder_traversal(root)
+        return min([self.values[i+1]-self.values[i] for i in range(len(self.values)-1)])
 
 # @lc code=end
 
