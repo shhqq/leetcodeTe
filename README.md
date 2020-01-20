@@ -255,12 +255,14 @@ It is interesting to construct the basic data type.
 TODO: Complete a hashset and hashmap without using library methods.
 
 ### Problem 728 self dividing number
+[ knowledge point ]: **for/else** loop. 
+
 
 It is the first time to use for/else loop.
 The for/else loop works like this:
 If the *for* loop ends normally namely it doesn't end by the *break* sentence, then the else sentence will be executed. 
 
-For example
+For example:
 ```python
 ans = []
 for i in range(3, 10):
@@ -269,5 +271,17 @@ for i in range(3, 10):
             break
     else:
         ans.append(i)
-print(ans)
+print(ans) # ans=[3,5,7]
 ```
+
+***
+## 20190119
+### Problem 733 flood fill
+I'm so stupid that I use a hashmap to record grids that have been checked.
+Actually, if the *newColor* is equal to the value of image[sr][sc], the image will not change at all.
+
+### Problem 746 min cost climb stairs
+Use a stack to record the mimimum cost of n-step stairs which must contain the n-th step.
+So the finally result is min(c[-1], c[-2]).
+Using recursion can also solve the problem, but this will repreatly calculate intermediate variables.
+
