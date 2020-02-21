@@ -289,6 +289,7 @@ Using recursion can also solve the problem, but this will repreatly calculate in
 ## 20200221
 ### Problem 874 walking robot simulation
 Use **set** to hash the list of obstacles. **Set** is hashable so that it will save much time.
+
 Knowledgement: set.
 ```python
 obstacles = [[1,2], [3,4], [8,2]]
@@ -296,3 +297,13 @@ obs_set = set(map(tuple, obstacles))
 print(obs_set)
 ```
 
+### Problem 884 uncommon words from two sentences
+Some functions of dictionary.
+dict.get(k, d=None)
+Return dict[k] if k is in keys of dict. If k is not in keys of dict, then append k: d into dict and return d.
+For example:
+```python
+d = {}
+d['apple'] = d.get('apple', 0) + 1
+print(d)
+```
