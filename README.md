@@ -275,7 +275,7 @@ print(ans) # ans=[3,5,7]
 ```
 
 ***
-## 20190119
+## 20200119
 ### Problem 733 flood fill
 I'm so stupid that I use a hashmap to record grids that have been checked.
 Actually, if the *newColor* is equal to the value of image[sr][sc], the image will not change at all.
@@ -284,4 +284,15 @@ Actually, if the *newColor* is equal to the value of image[sr][sc], the image wi
 Use a stack to record the mimimum cost of n-step stairs which must contain the n-th step.
 So the finally result is min(c[-1], c[-2]).
 Using recursion can also solve the problem, but this will repreatly calculate intermediate variables.
+
+***
+## 20200221
+### Problem 874 walking robot simulation
+Use **set** to hash the list of obstacles. **Set** is hashable so that it will save much time.
+Knowledgement: set.
+```python
+obstacles = [[1,2], [3,4], [8,2]]
+obs_set = set(map(tuple, obstacles))
+print(obs_set)
+```
 
