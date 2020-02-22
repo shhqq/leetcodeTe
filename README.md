@@ -307,3 +307,47 @@ d = {}
 d['apple'] = d.get('apple', 0) + 1
 print(d)
 ```
+
+***
+## 20200222
+Knowledgement: module: collections
+*collections* is a extension of basic data type of python(list, tuple, set and dictionary). *collections* supply some important data type of methods, like *Counter*, *deque*, *defaultdict*, *orderedDict* and *namedtuple*. The usage of them is showen as bellow:
+```python
+import collections
+
+# Counter can be used to list or string to get elements and their counts stored as a dictionary.
+# It has methods like a dictionary.
+print('========= Usage of collections.Counter() ============')
+nums = [1,2,3,2,4,3,5]
+c = collections.Counter(nums)
+print(c)
+print(c.values())
+for k in c.keys():
+    print(c[k])
+
+s = 'shgshdgs'
+c = collections.Counter(s)
+print(c)
+for k in c.keys():
+    print(c[k])
+
+
+# deque is extension of list. List is stored linearly. So it's time complexity is large when adding or removing data, especially when the scale of a list is very large. deque is list-like sequence optimized for data accesses near its endpoints.
+# a list only provides append() and pop() method from the end, while deque provides appendleft() and popleft() method from the top of it.
+print('========= Usage of collections.deque() ============')
+d = collections.deque([1,2,3])
+d.append(4)
+print(d)
+d.popleft()
+print(d)
+d.appendleft(0)
+print(d)
+```
+
+Knowledgement: enumerate
+*enumerate* return an enumerate object. It is an iterator for index and value of iterable
+```python
+a = [1, 2, 'e', 'rew', 7]
+for i, v in enumerate(a):
+    print(i, v)
+```
