@@ -351,3 +351,36 @@ a = [1, 2, 'e', 'rew', 7]
 for i, v in enumerate(a):
     print(i, v)
 ```
+
+## 20200417
+switch default language to java.
+
+### 
+1. java排序需使用
+Arrays.sort()
+2. java字符串使用双引号
+3. java的原始数据类型（如int）不是对象，没有toString()等属性，请使用Integer。
+4. java has two difference types of variables: **primitive** and **objects**. Only objects are **reference types**.
+
+Primitives including int, char, short, long, float, double, boolean and byte are not objects. And they don't have member variables or methods. Thay are just simple values. You cannot do somePrimitive.something(). For example:
+```java
+public class test{
+    public static void main(String[] args){
+        int x = 5;
+        System.out.println(x.length);       // invalid syntax in Java.
+    }
+}
+```
+You should use object *Integer*:
+```java
+public class test{
+    public static void main(String[] args){
+        Integer x = 5;
+        System.out.println(x.length);
+    }
+}
+```
+In Java, objects are always allocated on the heap and the stack contains only a reference. In general, **reference** is an address to some of object/variable, while getting or setting value for that variable you need to **de-reference** that means you need to get to the location where it is actually laying in the memory. So we can say that accessing the state or behaviour of an object using its reference with the help of the dot(.) operator is called **dereferencing**.
+
+[Reference](http://net-informations.com/java/err/dereferenced.htm)
+
