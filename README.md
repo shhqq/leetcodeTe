@@ -384,3 +384,7 @@ In Java, objects are always allocated on the heap and the stack contains only a 
 
 [Reference](http://net-informations.com/java/err/dereferenced.htm)
 
+## 20200424
+比较容易出错的点：
+1. 关于链表问题，next有可能会丢
+2. 关于回文问题，老是考虑不全。
