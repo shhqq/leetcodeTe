@@ -60,6 +60,7 @@ class Solution {
             res.add(new ArrayList<>(temp));
         } else {
             for (int i = 0; i < nums.length; i++) {
+                // 因为会有重复的值，所以这里统计出现的个数
                 if(count(temp, nums[i]) < count(nums, nums[i])){
                     temp.add(nums[i]);
                     backtrack(res, temp, nums);
