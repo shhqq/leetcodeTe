@@ -25,6 +25,11 @@ class Solution {
     }
     */
 
+        /**
+         * 使用动态规划，避免使用递归。
+         * 使用一个数组来保存中间结果，可以避免使用递归
+         * 
+         */
         int lastPosition = nums.length - 1;
         for(int i = nums.length - 2; i >= 0; i--){
             if(i + nums[i] >= lastPosition){

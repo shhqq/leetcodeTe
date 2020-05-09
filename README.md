@@ -389,11 +389,11 @@ In Java, objects are always allocated on the heap and the stack contains only a 
 1. 关于链表问题，next有可能会丢
 2. 关于回文问题，老是考虑不全。
 
-## 20200506
+## 20200506     problem 55 jump game
 ### 动态规划
-Naming
+#### Naming
 We call a position in the array a "good index" if starting at that position, we can reach the last index. Otherwise, that index is called a "bad index". The problem then reduces to whether or not index 0 is a "good index".
-Solution
+#### Solution
 This is a dynamic programming[1] question. Usually, solving and fully understanding a dynamic programming problem is a 4 step process:
 
 1. Start with the recursive backtracking solution
@@ -615,3 +615,8 @@ The (recursive) backtracking is the easiest to figure out, so it is worth mentio
 Most people are stuck when converting from top-down Dynamic Programming (expressed naturally in recursion) to bottom-up. Practicing similar problems will help bridge this gap.
 
 [Reference](https://leetcode.com/problems/jump-game/solution/)
+
+#### 总结
+
+使用递归将耗费较多时间，什么样的递归可以避免？
+如果是中间结果可以保存的，那么可能可以避免使用递归，例如斐波那契数列，可以使用一个数组来保存中间值，这样不需要每次递归都重复计算中间值。本例也是，可以使用一个数组记录中间结果，避免过多的重复计算。
