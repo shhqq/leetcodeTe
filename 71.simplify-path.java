@@ -14,12 +14,9 @@ class Solution {
         StringBuilder s = new StringBuilder();
         for(int i = 0; i < path.length(); i++){
             char c = path.charAt(i);
-            if(c == '/' && s.length() == 0){
+            if(c == '/'){
                 continue;
-            } else if(c == '/' && s.length() > 0){
-                dirs.add(s.toString());
-                s = new StringBuilder();
-            } else if (c != '/'){   
+            } else {   
                 // .也可以作为文件名的一部分，所以这里截取.到下一个/之间的部分
                 // 但这样好像还是没考虑 a.b a..b 的情况。 不过也没有报错
                 // 现在考虑了这种情况
@@ -38,12 +35,7 @@ class Solution {
                 } else {
                     dirs.add(str);
                 }
-            } else {
-                s.append(c);
             }
-        }
-        if(s.length() > 0){
-            dirs.add(s.toString());
         }
 
         s = new StringBuilder();
