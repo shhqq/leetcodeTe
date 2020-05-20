@@ -28,6 +28,8 @@ import javax.swing.tree.TreeNode;
  */
 class Solution {
     public List<Integer> inorderTraversal(TreeNode root) {
+        // 不使用递归，进行二叉树中序遍历
+        // 采用一个栈存储父节点
         List<Integer> ans = new ArrayList<>();
         TreeNode curr = root;
         Stack<TreeNode> s = new Stack<>();      // Stack can also be replaced to ArrayList()
