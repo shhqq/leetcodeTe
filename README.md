@@ -666,3 +666,14 @@ Most people are stuck when converting from top-down Dynamic Programming (express
 [reference1](https://www.cnblogs.com/grandyang/p/4741122.html)
 [reference2](https://www.cnblogs.com/grandyang/p/4263927.html)
 [reference3](https://hanfeng.ink/post/bitwise/)
+
+
+### Problem 139 word break
+使用递归当然可以完成这个题，但是递归的时间太长。
+
+如同Problem 55一样，递归有时候可以用一个数组记录中间量避免递归，如斐波那契数列；另一种是本题，使用一个数组可以避免递归，这里的递归是因为递归深度太深，因为有个测试用例是一长串a加一个b：aaaa...aaab。此时递归深度太深导致超时。
+
+因此==递归可能有两个弊端==：
+1. 递归有一些重复计算
+2. 递归过深，耗时太长
+
