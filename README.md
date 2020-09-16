@@ -685,3 +685,23 @@ Most people are stuck when converting from top-down Dynamic Programming (express
 144，145 都是二叉树的遍历，使用一个栈保存未遍历的节点，可以避免使用递归。后续遍历稍微麻烦一点。
 
 146，使用一个链表来保存信息，因为链表对顺序的操作比较方便，只要断开就行。
+
+## 20200916
+两个题目：
+
+都是==链表排序==。
+
+147是插入排序，相对简单一点，需要注意的是有些节点需要断开连接。
+
+148也是链表排序，但要求时间复杂度为O(N*logN)，空间复杂度为O(1)，所有比较麻烦。需要使用**Merge Sort**（归并排序，合并排序）。
+* 使用up-bottom将会使用到递归，空间复杂度不满足要求；
+* 所以要使用bottom-up方式。
+
+150 运算符后置，使用一个栈存储数字即可，如果遇到运算符，则出栈两个数字，运算后再入栈。
+
+151 翻转一个字符串中的单词，简单点使用一个字符串列表，然后，使用String.join()即可。
+
+==152== 最大的乘积。 这个答案太难了，两种方案：
+* 这种方案稍微好理解一点，具有最大乘积的子列表，**必定包含第一个或最后一个元素**。[Reference](https://leetcode.com/problems/maximum-product-subarray/discuss/183483/JavaC%2B%2BPython-it-can-be-more-simple)
+
+* 这个方案稍微难理解一点，当出现一个负数时，需要交换imax和imin，不懂。[Reference](https://leetcode.com/problems/maximum-product-subarray/discuss/48230/Possibly-simplest-solution-with-O(n)-time-complexity)
