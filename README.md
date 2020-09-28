@@ -705,3 +705,16 @@ Most people are stuck when converting from top-down Dynamic Programming (express
 * 这种方案稍微好理解一点，具有最大乘积的子列表，**必定包含第一个或最后一个元素**。[Reference](https://leetcode.com/problems/maximum-product-subarray/discuss/183483/JavaC%2B%2BPython-it-can-be-more-simple)
 
 * 这个方案稍微难理解一点，当出现一个负数时，需要交换imax和imin，不懂。[Reference](https://leetcode.com/problems/maximum-product-subarray/discuss/48230/Possibly-simplest-solution-with-O(n)-time-complexity)
+
+## 20200928总结
+153 不难，就是一个二分法，想清楚逻辑就可以
+
+162 找一个峰值，因为规定了数组之外的两个值都是负无穷，所以一定存在峰值，二分法，比较中间的两个值，如果左侧大，那么往左找，如果右侧大，则往右找。
+
+165 比较版本号，不难。
+
+166 分数变为小数表示，主要就是边界条件，超出Integer范围，将int变为long再进行运算。
+
+173 类似二叉树的迭代遍历，使用一个栈和一个指针。
+
+179 有点意思，容易忽略情况。就是自定义一个比较器，注意23和2323232这样的情况如何比较。
